@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+}
+
+ol {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  counter-reset: my-awesome-counter;
+}
+
+ol .numeros {
+  margin-bottom: 1.5rem;
+
+  font-size: 1rem;
+
+  counter-increment: my-awesome-counter;
+}
+
+ol .numeros::before {
+  content: 'Vol. 0' counter(my-awesome-counter);
+
+  margin-right: 0.5rem;
+
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
+  text-align: center;
+}
+
+ol .numeros ul {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ol .numeros {
+    flex-basis: 50%;
+  }
+}
