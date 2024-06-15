@@ -36,7 +36,6 @@ ol .numeros {
   margin-bottom: 1.5rem;
 
   font-size: 1rem;
-  text-align: center;
 
   counter-increment: my-awesome-counter;
 }
@@ -50,7 +49,6 @@ ol .numeros::before {
   font-size: 1.5rem;
   font-family: 'Abril Fatface', serif;
   line-height: 1;
-  text-align: center;
 }
 
 ol .numeros ul {
@@ -60,11 +58,14 @@ ol .numeros ul {
 h1 {
   color: tomato;
   font-size: 2rem;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
   ol .numeros {
     flex-basis: 20%;
   }
+}
+
+.text-center {
+  text-align: center;
 }
