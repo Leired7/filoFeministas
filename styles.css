@@ -2,8 +2,15 @@ body {
   font-family: sans-serif;
 }
 
+nav {
+  margin-bottom: 4rem;
+}
+
 ol {
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
 
   padding: 0;
   margin: 0;
@@ -11,10 +18,25 @@ ol {
   counter-reset: my-awesome-counter;
 }
 
+ol li:first-child {
+  margin-bottom: 1rem;
+
+  width: 100%;
+  font-size: 1rem;
+  color: hotpink;
+}
+
 ol .numeros {
+  flex-basis: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin-bottom: 1.5rem;
 
   font-size: 1rem;
+  text-align: center;
 
   counter-increment: my-awesome-counter;
 }
@@ -25,7 +47,7 @@ ol .numeros::before {
   margin-right: 0.5rem;
 
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: 'Abril Fatface', serif;
   line-height: 1;
   text-align: center;
@@ -35,13 +57,14 @@ ol .numeros ul {
   margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
-  ol {
-    display: flex;
-    flex-wrap: wrap;
-  }
+h1 {
+  color: tomato;
+  font-size: 2rem;
+  text-align: center;
+}
 
+@media (min-width: 768px) {
   ol .numeros {
-    flex-basis: 50%;
+    flex-basis: 20%;
   }
 }
